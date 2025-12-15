@@ -219,9 +219,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public void updateObjectInDB(MCObject object) {
         String sql = "UPDATE " + OBJECTS + " SET" +
-                " type = '" + SQLFormat(object.getType() +
-                "', project = '" + SQLFormat(object.getProject() +
-                "', name = '" + SQLFormat(object.getName()))) +
+                " type = '" + SQLFormat(object.getType()) +
+                "', project = '" + SQLFormat(object.getProject()) +
+                "', name = '" + SQLFormat(object.getName()) +
                 "', latestContributor = " + object.getLatestContributor() +
                 " WHERE id = " + object.getId();
         SQLiteDatabase db = this.getWritableDatabase();
