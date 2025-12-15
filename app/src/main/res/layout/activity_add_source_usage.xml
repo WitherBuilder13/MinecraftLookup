@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.AddSourceUsage">
+
+    <Button
+        android:id="@+id/ASU_btn_addSourceUsage"
+        android:layout_width="180dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#096B00"
+        android:text="Add Source"
+        android:textSize="24sp"
+        app:cornerRadius="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ASU_lv_objects" />
+
+    <Button
+        android:id="@+id/ASU_btn_objects"
+        android:layout_width="155dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#096B00"
+        android:text="Relevant Objects"
+        android:textSize="14sp"
+        app:cornerRadius="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/ASU_lv_objects"
+        app:layout_constraintStart_toStartOf="@+id/ASU_lv_objects"
+        app:layout_constraintTop_toBottomOf="@+id/ASU_et_description" />
+
+    <EditText
+        android:id="@+id/ASU_et_description"
+        android:layout_width="380dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Description"
+        android:inputType="textMultiLine"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ASU_sp_type" />
+
+    <TextView
+        android:id="@+id/ASU_tv_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Type"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ASU_sp_type"
+        app:layout_constraintStart_toStartOf="@+id/ASU_et_description"
+        app:layout_constraintTop_toTopOf="@+id/ASU_sp_type" />
+
+    <Spinner
+        android:id="@+id/ASU_sp_type"
+        android:layout_width="276dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="148dp"
+        app:layout_constraintStart_toEndOf="@+id/ASU_tv_type"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ASU_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add -S/U-"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/ASU_lv_objects"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ASU_btn_objects" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/ASU_sp_type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ASU_tv_title">
+
+        <TextView
+            android:id="@+id/ASU_tv_objectName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-object name-"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/ASU_tv_objectTypeProject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-object type | object project-"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ASU_tv_objectName" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageButton
+        android:id="@+id/ASU_btn_addType"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="#096B00"
+        app:layout_constraintStart_toEndOf="@+id/ASU_sp_type"
+        app:layout_constraintTop_toTopOf="@+id/ASU_sp_type"
+        app:srcCompat="@android:drawable/ic_menu_add" />
+
+    <ImageButton
+        android:id="@+id/ASU_btn_home"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#096B00"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/homebtn" />
+
+    <ImageButton
+        android:id="@+id/ASU_btn_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/btn_dialog" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

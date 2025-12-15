@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ContributionSearch">
+
+    <ImageButton
+        android:id="@+id/CS_btn_home"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#096B00"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/homebtn" />
+
+    <ImageButton
+        android:id="@+id/CS_btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/btn_dialog" />
+
+    <Button
+        android:id="@+id/CS_btn_resetSearch"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:backgroundTint="#096B00"
+        android:text="Reset Search"
+        android:textSize="14sp"
+        app:cornerRadius="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/CS_cb_sourceUsageTypes"
+        app:layout_constraintEnd_toEndOf="@+id/CS_et_search"
+        app:layout_constraintStart_toStartOf="@+id/CS_et_search"
+        app:layout_constraintTop_toBottomOf="@+id/CS_et_search" />
+
+    <ListView
+        android:id="@+id/CS_lv_contributions"
+        android:layout_width="400dp"
+        android:layout_height="430dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CS_cb_sourceUsageTypes">
+
+    </ListView>
+
+    <EditText
+        android:id="@+id/CS_et_search"
+        android:layout_width="235dp"
+        android:layout_height="41dp"
+        android:ems="10"
+        android:hint="Search Contributions..."
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/CS_btn_resetSearch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/CS_cb_sources"
+        app:layout_constraintTop_toTopOf="@+id/CS_cb_objects" />
+
+    <TextView
+        android:id="@+id/CS_tv_contributions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="-user-'s Contributions"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CS_btn_home" />
+
+    <CheckBox
+        android:id="@+id/CS_cb_objects"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Objects"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CS_tv_contributions" />
+
+    <CheckBox
+        android:id="@+id/CS_cb_sources"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:text="Object Sources"
+        app:layout_constraintStart_toStartOf="@+id/CS_cb_objects"
+        app:layout_constraintTop_toBottomOf="@+id/CS_cb_objects" />
+
+    <CheckBox
+        android:id="@+id/CS_cb_usages"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:text="Object Usages"
+        app:layout_constraintStart_toStartOf="@+id/CS_cb_sources"
+        app:layout_constraintTop_toBottomOf="@+id/CS_cb_sources" />
+
+    <CheckBox
+        android:id="@+id/CS_cb_sourceUsageTypes"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:text="Source / Usage Types"
+        app:layout_constraintStart_toStartOf="@+id/CS_cb_usages"
+        app:layout_constraintTop_toBottomOf="@+id/CS_cb_usages" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

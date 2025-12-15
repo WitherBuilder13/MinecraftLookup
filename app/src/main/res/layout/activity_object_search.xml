@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ObjectSearch">
+
+    <ImageButton
+        android:id="@+id/OS_btn_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/btn_dialog" />
+
+    <ImageButton
+        android:id="@+id/OS_btn_home"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#096B00"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/homebtn" />
+
+    <Button
+        android:id="@+id/OS_btn_ok"
+        android:layout_width="80dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#096B00"
+        android:text="OK"
+        android:textSize="24sp"
+        app:cornerRadius="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/OS_lv_objects" />
+
+    <Button
+        android:id="@+id/OS_btn_new"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#096B00"
+        android:text="New"
+        android:textSize="24sp"
+        app:cornerRadius="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/OS_btn_ok"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/OS_btn_ok" />
+
+    <Button
+        android:id="@+id/OS_btn_resetSearch"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:backgroundTint="#096B00"
+        android:text="Reset Search"
+        android:textSize="14sp"
+        app:cornerRadius="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/OS_lv_types"
+        app:layout_constraintStart_toStartOf="@+id/OS_lv_types"
+        app:layout_constraintTop_toTopOf="@+id/OS_lv_objects" />
+
+    <TextView
+        android:id="@+id/OS_tv_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:text="Type"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/OS_btn_resetSearch" />
+
+    <CheckBox
+        android:id="@+id/OS_cb_typeAll"
+        android:layout_width="52dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="64dp"
+        android:text="All"
+        app:layout_constraintStart_toEndOf="@+id/OS_tv_type"
+        app:layout_constraintTop_toTopOf="@+id/OS_tv_type" />
+
+    <TextView
+        android:id="@+id/OS_tv_project"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Project"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/OS_lv_types"
+        app:layout_constraintTop_toBottomOf="@+id/OS_lv_types" />
+
+    <CheckBox
+        android:id="@+id/OS_cb_projectAll"
+        android:layout_width="52dp"
+        android:layout_height="22dp"
+        android:text="All"
+        app:layout_constraintStart_toStartOf="@+id/OS_cb_typeAll"
+        app:layout_constraintTop_toTopOf="@+id/OS_tv_project" />
+
+    <CheckBox
+        android:id="@+id/OS_cb_contributorAll"
+        android:layout_width="52dp"
+        android:layout_height="22dp"
+        android:text="All"
+        app:layout_constraintStart_toStartOf="@+id/OS_cb_projectAll"
+        app:layout_constraintTop_toTopOf="@+id/OS_tv_contributor" />
+
+    <TextView
+        android:id="@+id/OS_tv_contributor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Contributor"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/OS_lv_projects"
+        app:layout_constraintTop_toBottomOf="@+id/OS_lv_projects" />
+
+    <EditText
+        android:id="@+id/OS_et_search"
+        android:layout_width="400dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Search Objects..."
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/OS_btn_cancel" />
+
+    <TextView
+        android:id="@+id/OS_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Objects"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/OS_lv_types"
+        android:layout_width="150dp"
+        android:layout_height="155dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@+id/OS_tv_type"
+        app:layout_constraintTop_toBottomOf="@+id/OS_tv_type" />
+
+    <ListView
+        android:id="@+id/OS_lv_projects"
+        android:layout_width="150dp"
+        android:layout_height="155dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@+id/OS_lv_types"
+        app:layout_constraintTop_toBottomOf="@+id/OS_tv_project" />
+
+    <ListView
+        android:id="@+id/OS_lv_contributors"
+        android:layout_width="150dp"
+        android:layout_height="155dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@+id/OS_lv_projects"
+        app:layout_constraintTop_toBottomOf="@+id/OS_tv_contributor" />
+
+    <ListView
+        android:id="@+id/OS_lv_objects"
+        android:layout_width="244dp"
+        android:layout_height="520dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/OS_lv_types"
+        app:layout_constraintTop_toBottomOf="@+id/OS_et_search" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

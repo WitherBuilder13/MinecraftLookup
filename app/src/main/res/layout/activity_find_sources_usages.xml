@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.FindSourceUsages">
+
+    <ImageButton
+        android:id="@+id/FSU_btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/btn_dialog" />
+
+    <ImageButton
+        android:id="@+id/FSU_btn_home"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#096B00"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/homebtn" />
+
+    <CheckBox
+        android:id="@+id/FSU_cb_typeAll"
+        android:layout_width="52dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="64dp"
+        android:text="All"
+        app:layout_constraintStart_toEndOf="@+id/FSU_tv_type"
+        app:layout_constraintTop_toTopOf="@+id/FSU_tv_type" />
+
+    <CheckBox
+        android:id="@+id/FSU_cb_contributorAll"
+        android:layout_width="52dp"
+        android:layout_height="22dp"
+        android:text="All"
+        app:layout_constraintStart_toStartOf="@+id/FSU_cb_typeAll"
+        app:layout_constraintTop_toTopOf="@+id/FSU_tv_contributor" />
+
+    <TextView
+        android:id="@+id/FSU_tv_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Type"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/FSU_lv_objects"
+        app:layout_constraintTop_toBottomOf="@+id/FSU_lv_objects" />
+
+    <TextView
+        android:id="@+id/FSU_tv_contributor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Contributor"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/FSU_lv_types"
+        app:layout_constraintTop_toBottomOf="@+id/FSU_lv_types" />
+
+    <Button
+        android:id="@+id/FSU_btn_resetSearch"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#096B00"
+        android:text="Reset Search"
+        android:textSize="14sp"
+        app:cornerRadius="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FSU_tv_title" />
+
+    <Button
+        android:id="@+id/FSU_btn_objects"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#096B00"
+        android:text="Objects"
+        android:textSize="16sp"
+        app:cornerRadius="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/FSU_lv_objects"
+        app:layout_constraintStart_toStartOf="@+id/FSU_lv_objects"
+        app:layout_constraintTop_toBottomOf="@+id/FSU_btn_resetSearch" />
+
+    <EditText
+        android:id="@+id/FSU_et_search"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:hint="Find -Sources/Usages-..."
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/FSU_btn_resetSearch"
+        app:layout_constraintTop_toTopOf="@+id/FSU_btn_resetSearch" />
+
+    <TextView
+        android:id="@+id/FSU_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Find -Sources-"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/FSU_lv_sourceUsages"
+        android:layout_width="244dp"
+        android:layout_height="600dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/FSU_lv_objects"
+        app:layout_constraintTop_toBottomOf="@+id/FSU_et_search" />
+
+    <ListView
+        android:id="@+id/FSU_lv_types"
+        android:layout_width="150dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@+id/FSU_tv_type"
+        app:layout_constraintTop_toBottomOf="@+id/FSU_tv_type" />
+
+    <ListView
+        android:id="@+id/FSU_lv_objects"
+        android:layout_width="150dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FSU_btn_objects" />
+
+    <ListView
+        android:id="@+id/FSU_lv_contributors"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@+id/FSU_tv_contributor"
+        app:layout_constraintTop_toBottomOf="@+id/FSU_tv_contributor" />
+</androidx.constraintlayout.widget.ConstraintLayout>

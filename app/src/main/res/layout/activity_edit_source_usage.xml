@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.EditSourceUsage">
+
+    <ImageButton
+        android:id="@+id/ESU_btn_home"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#096B00"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/homebtn" />
+
+    <ImageButton
+        android:id="@+id/ESU_btn_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/btn_dialog" />
+
+    <ImageButton
+        android:id="@+id/ESU_btn_addType"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="#096B00"
+        app:layout_constraintStart_toEndOf="@+id/ESU_sp_type"
+        app:layout_constraintTop_toTopOf="@+id/ESU_sp_type"
+        app:srcCompat="@android:drawable/ic_menu_add" />
+
+    <Button
+        android:id="@+id/ESU_btn_deleteSourceUsage"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#A80000"
+        android:text="Delete Object"
+        android:textSize="16sp"
+        app:cornerRadius="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/ESU_btn_updateSourceUsage"
+        android:layout_width="210dp"
+        android:layout_height="70dp"
+        android:backgroundTint="#096B00"
+        android:text="Update Source"
+        android:textSize="24sp"
+        app:cornerRadius="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="604dp" />
+
+    <Button
+        android:id="@+id/ESU_btn_objects"
+        android:layout_width="155dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#096B00"
+        android:text="Relevant Objects"
+        android:textSize="14sp"
+        app:cornerRadius="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/ESU_lv_objects"
+        app:layout_constraintStart_toStartOf="@+id/ESU_lv_objects"
+        app:layout_constraintTop_toBottomOf="@+id/ESU_et_description" />
+
+    <EditText
+        android:id="@+id/ESU_et_description"
+        android:layout_width="380dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Description"
+        android:inputType="textMultiLine"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ESU_sp_type" />
+
+    <TextView
+        android:id="@+id/ESU_tv_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Type"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ESU_sp_type"
+        app:layout_constraintStart_toStartOf="@+id/ESU_et_description"
+        app:layout_constraintTop_toTopOf="@+id/ESU_sp_type" />
+
+    <Spinner
+        android:id="@+id/ESU_sp_type"
+        android:layout_width="260dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="130dp"
+        app:layout_constraintStart_toEndOf="@+id/ESU_tv_type"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ESU_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit -S/U-"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/ESU_cl_object"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/ESU_lv_objects"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ESU_btn_objects" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ESU_cl_object"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/ESU_sp_type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ESU_tv_title">
+
+        <TextView
+            android:id="@+id/ESU_tv_objectName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-object name-"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/ESU_tv_objectTypeProject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-object type | object project-"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ESU_tv_objectName" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

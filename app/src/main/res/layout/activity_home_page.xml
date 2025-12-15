@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.HomePage">
+
+    <Button
+        android:id="@+id/HP_btn_new"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#096B00"
+        android:text="New"
+        android:textSize="24sp"
+        app:cornerRadius="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/HP_btn_users" />
+
+    <Button
+        android:id="@+id/HP_btn_resetSearch"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:backgroundTint="#096B00"
+        android:text="Reset Search"
+        android:textSize="14sp"
+        app:cornerRadius="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/HP_lv_types"
+        app:layout_constraintStart_toStartOf="@+id/HP_lv_types"
+        app:layout_constraintTop_toTopOf="@+id/HP_lv_objects" />
+
+    <Button
+        android:id="@+id/HP_btn_users"
+        android:layout_width="120dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#096B00"
+        android:text="Users"
+        android:textSize="24sp"
+        app:cornerRadius="24sp"
+        app:layout_constraintStart_toStartOf="@+id/HP_lv_objects"
+        app:layout_constraintTop_toBottomOf="@+id/HP_lv_objects" />
+
+    <ListView
+        android:id="@+id/HP_lv_contributors"
+        android:layout_width="150dp"
+        android:layout_height="145dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@+id/HP_tv_contributor"
+        app:layout_constraintTop_toBottomOf="@+id/HP_tv_contributor" />
+
+    <TextView
+        android:id="@+id/HP_tv_contributor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Contributor"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/HP_lv_projects"
+        app:layout_constraintTop_toBottomOf="@+id/HP_lv_projects" />
+
+    <TextView
+        android:id="@+id/HP_tv_project"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Project"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/HP_lv_types"
+        app:layout_constraintTop_toBottomOf="@+id/HP_lv_types" />
+
+    <TextView
+        android:id="@+id/HP_tv_hello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Hello,"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/HP_et_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/HP_et_search"
+        android:layout_width="400dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="48dp"
+        android:ems="10"
+        android:hint="Search Objects..."
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HP_btn_account" />
+
+    <ListView
+        android:id="@+id/HP_lv_types"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@+id/HP_tv_type"
+        app:layout_constraintTop_toBottomOf="@+id/HP_tv_type" />
+
+    <TextView
+        android:id="@+id/HP_tv_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:text="Type"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HP_btn_resetSearch" />
+
+    <ListView
+        android:id="@+id/HP_lv_projects"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@+id/HP_tv_project"
+        app:layout_constraintTop_toBottomOf="@+id/HP_tv_project" />
+
+    <ListView
+        android:id="@+id/HP_lv_objects"
+        android:layout_width="244dp"
+        android:layout_height="500dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/HP_lv_types"
+        app:layout_constraintTop_toBottomOf="@+id/HP_et_search" />
+
+    <CheckBox
+        android:id="@+id/HP_cb_typeAll"
+        android:layout_width="52dp"
+        android:layout_height="22dp"
+        android:text="All"
+        app:layout_constraintEnd_toEndOf="@+id/HP_lv_types"
+        app:layout_constraintTop_toTopOf="@+id/HP_tv_type" />
+
+    <CheckBox
+        android:id="@+id/HP_cb_projectAll"
+        android:layout_width="52dp"
+        android:layout_height="22dp"
+        android:text="All"
+        app:layout_constraintStart_toStartOf="@+id/HP_cb_typeAll"
+        app:layout_constraintTop_toTopOf="@+id/HP_tv_project" />
+
+    <CheckBox
+        android:id="@+id/HP_cb_contributorAll"
+        android:layout_width="52dp"
+        android:layout_height="22dp"
+        android:text="All"
+        app:layout_constraintStart_toStartOf="@+id/HP_cb_projectAll"
+        app:layout_constraintTop_toTopOf="@+id/HP_tv_contributor" />
+
+    <ImageButton
+        android:id="@+id/HP_btn_account"
+        android:layout_width="45dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#096B00"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/account" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

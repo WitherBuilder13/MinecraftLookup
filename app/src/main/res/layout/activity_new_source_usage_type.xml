@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.NewSourceUsageType">
+
+    <ImageButton
+        android:id="@+id/NSUT_btn_addProject"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="#096B00"
+        app:layout_constraintStart_toEndOf="@+id/NSUT_sp_project"
+        app:layout_constraintTop_toTopOf="@+id/NSUT_sp_project"
+        app:srcCompat="@android:drawable/ic_menu_add" />
+
+    <ImageButton
+        android:id="@+id/NSUT_btn_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/btn_dialog" />
+
+    <ImageButton
+        android:id="@+id/NSUT_btn_home"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#096B00"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/homebtn" />
+
+    <TextView
+        android:id="@+id/NSUT_tv_error_sourceTypeExists"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A Source / Usage Type with this project and name already exists!"
+        android:textColor="#D60101"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NSUT_et_name"
+        tools:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/NSUT_tv_project"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Project"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/NSUT_sp_project"
+        app:layout_constraintStart_toStartOf="@+id/NSUT_et_name"
+        app:layout_constraintTop_toTopOf="@+id/NSUT_sp_project" />
+
+    <Spinner
+        android:id="@+id/NSUT_sp_project"
+        android:layout_width="260dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/NSUT_et_name"
+        app:layout_constraintStart_toEndOf="@+id/NSUT_tv_project" />
+
+    <Button
+        android:id="@+id/NSUT_btn_createSourceUsageType"
+        android:layout_width="360dp"
+        android:layout_height="70dp"
+        android:backgroundTint="#096B00"
+        android:text="Create Source / Usage Type"
+        android:textSize="24sp"
+        app:cornerRadius="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/NSUT_tv_error_sourceTypeExists" />
+
+    <EditText
+        android:id="@+id/NSUT_et_name"
+        android:layout_width="380dp"
+        android:layout_height="44dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/NSUT_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Source / Usage Type"
+        android:textAlignment="center"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/NSUT_sp_project"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
